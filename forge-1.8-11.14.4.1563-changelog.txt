@@ -1,12 +1,48 @@
 Changelog:
-Build 1558:
+Build 1563:
+	LexManos: Bump version for Recomended Build.
+
+Build 1.8-11.14.3.1562:
+	LexManos:
+		Merge pull request #2179 from arideus101/patch-1
+		
+		Fixed issue where custom colored armor wouldn't be colored. (reverted from commit dee0b2084b519419bbf97d8ad177204830ea2b07)
+
+Build 1.8-11.14.3.1561:
+	jasondoyle528: Allows Custom Armor Coloring to be done easily
+
+Build 1.8-11.14.3.1560:
+	gabizou:
+		Fix a possible NPE when checking supertypes of interfaces. Closes #2176.
+		
+		Signed-off-by: Gabriel Harris-Rouquette <gabizou@me.com>
+
+Build 1.8-11.14.3.1559:
+	bjoern:
+		Fix possible crash in EventBus
+		
+		There is currently no way to check if an event handler has been registered or not.
+		But when trying to unregister a not-registered event handler, Minecraft crashes with a NullPointerException.
+		This is a simple fix to prevent such crashes.
+	cpw: Fix substitutions for recipes and oredict recipes. Should mean that substitutions start working properly.
+	cpw:
+		OreDictionary will warn if there's an invalid ore being registered now, rather than just
+		using -1 and doing weird things with the list as a result.
+	cpw: Two more corner cases in the oredictionary. Should work for all cases now.
 	cpw:
 		Fix firing the remap event. It always fires now, and additionally fires when the registry reverts to frozen.
 		Most mods refer to the gameregistry for ids they care about, so this shouldn't affect anything significantly,
 		but if your mod was dependent on their being content in the remap event, and only acting on that content,
 		empty content means it's "reverted to frozen" state - the state at the start of the game.
 
-Build Build Artifacts:<ul><li><a href="scp://files.minecraftforge.net/home/files/files.minecraftforge.net/mavennet/minecraftforge/forge/1.7.10-10.13.4.1557-1.7.10/forge-1.7.10-10.13.4.1557-1.7.10-installer-win.exe">forge-1.7.10-10.13.4.1557-1.7.10-installer-win.exe</a><li><a href="scp://files.minecraftforge.net/home/files/files.minecraftforge.net/mavennet/minecraftforge/forge/1.7.10-10.13.4.1557-1.7.10/forge-1.7.10-10.13.4.1557-1.7.10-universal.jar">forge-1.7.10-10.13.4.1557-1.7.10-universal.jar</a><li><a href="scp://files.minecraftforge.net/home/files/files.minecraftforge.net/mavennet/minecraftforge/forge/1.7.10-10.13.4.1557-1.7.10/forge-1.7.10-10.13.4.1557-1.7.10-changelog.txt">forge-1.7.10-10.13.4.1557-1.7.10-changelog.txt</a><li><a href="scp://files.minecraftforge.net/home/files/files.minecraftforge.net/mavennet/minecraftforge/forge/1.7.10-10.13.4.1557-1.7.10/forge-1.7.10-10.13.4.1557-1.7.10-userdev.jar">forge-1.7.10-10.13.4.1557-1.7.10-userdev.jar</a><li><a href="scp://files.minecraftforge.net/home/files/files.minecraftforge.net/mavennet/minecraftforge/forge/1.7.10-10.13.4.1557-1.7.10/forge-1.7.10-10.13.4.1557-1.7.10-installer.jar">forge-1.7.10-10.13.4.1557-1.7.10-installer.jar</a><li><a href="scp://files.minecraftforge.net/home/files/files.minecraftforge.net/mavennet/minecraftforge/forge/1.7.10-10.13.4.1557-1.7.10/forge-1.7.10-10.13.4.1557-1.7.10-src.zip">forge-1.7.10-10.13.4.1557-1.7.10-src.zip</a></ul>:
+Build 1.7.10-10.13.4.1558-1.7.10:
+	cpw:
+		Fix firing the remap event. It always fires now, and additionally fires when the registry reverts to frozen.
+		Most mods refer to the gameregistry for ids they care about, so this shouldn't affect anything significantly,
+		but if your mod was dependent on their being content in the remap event, and only acting on that content,
+		empty content means it's "reverted to frozen" state - the state at the start of the game.
+
+Build 1.7.10-10.13.4.1557-1.7.10:
 	cpw: Two more corner cases in the oredictionary. Should work for all cases now.
 
 Build 1.8-11.14.3.1556:
@@ -58,12 +94,12 @@ Build 1.8-11.14.3.1543:
 	fry: Fix color multiplier applied incorrectly for items.
 	fry: OBJ loader: fixed another whitespace-related issue; removed unused "modifyUVs" property for now; added the "flip-v" property to switch between OpenGL-style and DirextX-style model UVs; fixed normals - they are now correct in-world, still a bit strange for the items; fixed normals a little bit for B3D models too.
 
-Build Build Artifacts:<ul><li><a href="scp://files.minecraftforge.net/home/files/files.minecraftforge.net/mavennet/minecraftforge/forge/1.7.10-10.13.4.1541-1.7.10/forge-1.7.10-10.13.4.1541-1.7.10-userdev.jar">forge-1.7.10-10.13.4.1541-1.7.10-userdev.jar</a><li><a href="scp://files.minecraftforge.net/home/files/files.minecraftforge.net/mavennet/minecraftforge/forge/1.7.10-10.13.4.1541-1.7.10/forge-1.7.10-10.13.4.1541-1.7.10-installer.jar">forge-1.7.10-10.13.4.1541-1.7.10-installer.jar</a><li><a href="scp://files.minecraftforge.net/home/files/files.minecraftforge.net/mavennet/minecraftforge/forge/1.7.10-10.13.4.1541-1.7.10/forge-1.7.10-10.13.4.1541-1.7.10-installer-win.exe">forge-1.7.10-10.13.4.1541-1.7.10-installer-win.exe</a><li><a href="scp://files.minecraftforge.net/home/files/files.minecraftforge.net/mavennet/minecraftforge/forge/1.7.10-10.13.4.1541-1.7.10/forge-1.7.10-10.13.4.1541-1.7.10-changelog.txt">forge-1.7.10-10.13.4.1541-1.7.10-changelog.txt</a><li><a href="scp://files.minecraftforge.net/home/files/files.minecraftforge.net/mavennet/minecraftforge/forge/1.7.10-10.13.4.1541-1.7.10/forge-1.7.10-10.13.4.1541-1.7.10-src.zip">forge-1.7.10-10.13.4.1541-1.7.10-src.zip</a><li><a href="scp://files.minecraftforge.net/home/files/files.minecraftforge.net/mavennet/minecraftforge/forge/1.7.10-10.13.4.1541-1.7.10/forge-1.7.10-10.13.4.1541-1.7.10-universal.jar">forge-1.7.10-10.13.4.1541-1.7.10-universal.jar</a></ul>:
+Build 1.7.10-10.13.4.1541-1.7.10:
 	cpw:
 		OreDictionary will warn if there's an invalid ore being registered now, rather than just
 		using -1 and doing weird things with the list as a result.
 
-Build Build Artifacts:<ul><li><a href="scp://files.minecraftforge.net/home/files/files.minecraftforge.net/mavennet/minecraftforge/forge/1.7.10-10.13.4.1539-1.7.10/forge-1.7.10-10.13.4.1539-1.7.10-installer.jar">forge-1.7.10-10.13.4.1539-1.7.10-installer.jar</a><li><a href="scp://files.minecraftforge.net/home/files/files.minecraftforge.net/mavennet/minecraftforge/forge/1.7.10-10.13.4.1539-1.7.10/forge-1.7.10-10.13.4.1539-1.7.10-changelog.txt">forge-1.7.10-10.13.4.1539-1.7.10-changelog.txt</a><li><a href="scp://files.minecraftforge.net/home/files/files.minecraftforge.net/mavennet/minecraftforge/forge/1.7.10-10.13.4.1539-1.7.10/forge-1.7.10-10.13.4.1539-1.7.10-universal.jar">forge-1.7.10-10.13.4.1539-1.7.10-universal.jar</a><li><a href="scp://files.minecraftforge.net/home/files/files.minecraftforge.net/mavennet/minecraftforge/forge/1.7.10-10.13.4.1539-1.7.10/forge-1.7.10-10.13.4.1539-1.7.10-userdev.jar">forge-1.7.10-10.13.4.1539-1.7.10-userdev.jar</a><li><a href="scp://files.minecraftforge.net/home/files/files.minecraftforge.net/mavennet/minecraftforge/forge/1.7.10-10.13.4.1539-1.7.10/forge-1.7.10-10.13.4.1539-1.7.10-src.zip">forge-1.7.10-10.13.4.1539-1.7.10-src.zip</a><li><a href="scp://files.minecraftforge.net/home/files/files.minecraftforge.net/mavennet/minecraftforge/forge/1.7.10-10.13.4.1539-1.7.10/forge-1.7.10-10.13.4.1539-1.7.10-installer-win.exe">forge-1.7.10-10.13.4.1539-1.7.10-installer-win.exe</a></ul>:
+Build 1.7.10-10.13.4.1539-1.7.10:
 	diesieben07: Fix CME when entities are spawned from EntityJoinWorldEvent
 	bernhard.bonigl: Fix Potion IDs above 127
 	Abrar Syed: Update FG version to 2.0.2

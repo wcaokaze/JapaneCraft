@@ -1,15 +1,15 @@
 package com.wcaokaze.japanecraft
 
-import cpw.mods.fml.common.FMLCommonHandler
-import cpw.mods.fml.common.Mod
-import cpw.mods.fml.common.event.FMLInitializationEvent
-import cpw.mods.fml.common.eventhandler.SubscribeEvent
-import cpw.mods.fml.common.network.NetworkCheckHandler
-import cpw.mods.fml.relauncher.Side
 import kotlinx.coroutines.experimental.launch
 import net.minecraft.util.ChatComponentText
 import net.minecraftforge.common.MinecraftForge
 import net.minecraftforge.event.ServerChatEvent
+import net.minecraftforge.fml.common.FMLCommonHandler
+import net.minecraftforge.fml.common.Mod
+import net.minecraftforge.fml.common.event.FMLInitializationEvent
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
+import net.minecraftforge.fml.common.network.NetworkCheckHandler
+import net.minecraftforge.fml.relauncher.Side
 import java.util.*
 
 @Mod(modid = "japanecraft", version = "1.1.5")
