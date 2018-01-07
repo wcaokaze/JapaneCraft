@@ -1,13 +1,9 @@
 package com.wcaokaze.japanecraft
 
 import kotlinx.coroutines.experimental.launch
-import net.minecraft.util.text.ITextComponent
 import net.minecraft.util.text.TextComponentString
-import net.minecraft.util.text.TextComponentUtils
-import net.minecraftforge.client.event.RenderGameOverlayEvent
 import net.minecraftforge.common.MinecraftForge
 import net.minecraftforge.event.ServerChatEvent
-import net.minecraftforge.fml.common.FMLCommonHandler
 import net.minecraftforge.fml.common.Mod
 import net.minecraftforge.fml.common.event.FMLInitializationEvent
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
@@ -39,11 +35,7 @@ class JapaneCraftMod {
       )
 
       Configuration.variableExpander.expand(variableMap).split('\n').forEach {
-        FMLCommonHandler
-            .instance()
-            .minecraftServerInstance
-            .playerList
-            .sendMessage(TextComponentString(it))
+        event.player.sendMessage(TextComponentString(it))
       }
     }
 
