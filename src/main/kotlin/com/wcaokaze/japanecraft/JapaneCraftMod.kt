@@ -12,7 +12,7 @@ import net.minecraftforge.fml.common.network.NetworkCheckHandler
 import net.minecraftforge.fml.relauncher.Side
 import java.util.*
 
-@Mod(modid = "japanecraft", version = "1.1.5")
+@Mod(modid = "japanecraft", version = "1.1.7")
 class JapaneCraftMod {
   private val kanjiConverter = KanjiConverter()
 
