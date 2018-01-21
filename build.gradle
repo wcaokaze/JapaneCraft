@@ -14,7 +14,7 @@ apply plugin: 'kotlin'
 //Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 
 
-version = "1.1.6"
+version = "1.1.7"
 group= "com.kawakawaplanning.japanecraft" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "japanecraft"
 
@@ -37,7 +37,6 @@ minecraft {
 }
 
 dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
     compile "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
     compile "org.jetbrains.kotlinx:kotlinx-coroutines-core:0.21"
     compile fileTree(dir: 'lib', include: ['*.jar'])
