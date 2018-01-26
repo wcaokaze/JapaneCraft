@@ -16,6 +16,6 @@ class DictionaryTest {
   @Test fun notFound()    = assert(dictionary("あい")       == "あい")
   @Test fun halfOnTrie()  = assert(dictionary("あお")       == "青")
   @Test fun full()        = assert(dictionary("あおかぜ")   == "碧風")
-  @Test fun overrun()     = assert(dictionary("あおかぜの") == "碧風")
-  @Test fun complicated() = assert(dictionary("あおい")     == "青")
+  @Test fun overrun()     = assert(dictionary("あおかぜの") == "碧風の")
+  @Test fun complicated() = assert(dictionary("あおい")     == "青い")
 }
