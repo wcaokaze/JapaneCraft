@@ -78,7 +78,6 @@ object Configuration {
       it.writeText(
           """
             {
-              "いし": "石",
               "すけさん": "スケさん",
               "くも": "クモ",
               "つるはし": "ツルハシ"
