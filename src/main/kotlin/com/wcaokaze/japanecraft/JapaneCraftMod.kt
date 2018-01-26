@@ -6,13 +6,13 @@ import cpw.mods.fml.common.event.FMLInitializationEvent
 import cpw.mods.fml.common.eventhandler.SubscribeEvent
 import cpw.mods.fml.common.network.NetworkCheckHandler
 import cpw.mods.fml.relauncher.Side
-import kotlinx.coroutines.experimental.launch
 import net.minecraft.util.ChatComponentText
 import net.minecraftforge.common.MinecraftForge
 import net.minecraftforge.event.ServerChatEvent
 import java.util.*
+import kotlin.concurrent.thread
 
-@Mod(modid = "japanecraft", version = "1.1.7")
+@Mod(modid = "japanecraft", version = "1.1.8")
 class JapaneCraftMod {
   private val kanjiConverter = KanjiConverter()
 
@@ -23,7 +23,7 @@ class JapaneCraftMod {
 
   @SubscribeEvent
   fun onServerChat(event: ServerChatEvent) {
-    launch {
+    thread {
       val (rawMessage, convertedMessage) = convert(event.message)
 
       val variableMap = mapOf(
@@ -49,7 +49,7 @@ class JapaneCraftMod {
 
   @NetworkCheckHandler
   fun netCheckHandler(mods: Map<String, String>, side: Side): Boolean {
-    return true
+    return side.isServer
   }
 
   private fun convert(message: String): Pair<String, String> {

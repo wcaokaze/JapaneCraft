@@ -48,13 +48,11 @@ class KanjiConverter {
 
     val wordTypeList = parsedResponse
         .map { (rawString, kanjiString) ->
-          val wordType = when {
-            rawString.all { it.isWhitespace() } -> WHITESPACE
-            rawString.all { it < 0x80.toChar() } -> ENGLISH
-            else -> JAPANESE
+          when {
+            rawString.all { it.isWhitespace() }  -> WHITESPACE to rawString
+            rawString.all { it < 0x80.toChar() } -> ENGLISH    to rawString
+            else                                 -> JAPANESE   to kanjiString
           }
-
-          wordType to kanjiString
         }
         .toMutableList()
 
