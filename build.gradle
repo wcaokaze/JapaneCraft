@@ -1,5 +1,5 @@
 buildscript {
-    ext.kotlin_version = '1.2.10'
+    ext.kotlin_version = '1.2.50'
     repositories {
         mavenCentral()
         maven {
@@ -66,6 +66,8 @@ processResources
     from(sourceSets.main.resources.srcDirs) {
         exclude 'mcmod.info'
     }
+
+    from configurations.compile
 }
 repositories {
     mavenCentral()
