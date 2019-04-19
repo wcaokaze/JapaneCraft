@@ -1,4 +1,10 @@
 
+概要
+--------------------------------------------------------------------------------
+[水珈琲様のプロジェクト](https://github.com/mizucoffee/JapaneCraft)
+からforkしたものです。  
+Forgeサーバーに導入することで、チャットのローマ字を日本語に変換します。
+
 ![Screenshot](screenshot.png)
 
 
@@ -29,9 +35,11 @@
 
     漢字への変換を利用するかどうか。
 
+
 ### JapaneCraftRomajiTable.json
 
 ローマ字テーブル。
+
 
 ### JapaneCraftDictionary.json
 
