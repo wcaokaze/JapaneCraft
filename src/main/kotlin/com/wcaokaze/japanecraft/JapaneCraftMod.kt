@@ -49,7 +49,7 @@ class JapaneCraftMod {
 
   @NetworkCheckHandler
   fun netCheckHandler(mods: Map<String, String>, side: Side): Boolean {
-    return side.isServer
+    return true
   }
 
   private fun convert(message: String): Pair<String, String> {
